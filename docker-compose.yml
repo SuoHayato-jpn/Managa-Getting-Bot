@@ -1,0 +1,31 @@
+services:
+  bot:
+    build: .
+    container_name: manga_downloader_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./temp_pdfs:/app/temp_pdfs
+    depends_on:
+      - mongodb
+    networks:
+      - bot_network
+
+  mongodb:
+    image: mongo:6.0
+    container_name: manga_bot_mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: manga_bot_db
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - bot_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  bot_network:
+    driver: bridge
