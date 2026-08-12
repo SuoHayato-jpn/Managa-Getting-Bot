@@ -1,26 +1,23 @@
 # Telegram Bot Framework
-python-telegram-bot==20.7
+python-telegram-bot>=21.0
 
 # Async HTTP Client with HTTP/2 support
-httpx[http2]==0.25.2
+httpx[http2]>=0.27.0
 
 # Web Scraping
-beautifulsoup4==4.12.2
+beautifulsoup4>=4.12.3
 
 # MongoDB Async Driver
-motor==3.3.2
+motor>=3.6.0
 
 # PDF Generation
-img2pdf==0.5.1
+img2pdf>=0.5.1
 
-# Image Processing
-Pillow==10.1.0
+# Image Processing (Python 3.12+ compatibility)
+Pillow>=10.4.0
 
 # Task Scheduling
-APScheduler==3.10.4
+APScheduler>=3.10.4
 
 # Environment Variables
-python-dotenv==1.0.0
-
-# Async Support
-asyncio==3.4.3
+python-dotenv>=1.0.1
