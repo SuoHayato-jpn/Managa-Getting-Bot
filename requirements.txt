@@ -2,7 +2,7 @@
 python-telegram-bot==20.7
 
 # Async HTTP Client with HTTP/2 support
-httpx[http2]==0.26.0
+httpx[http2]==0.25.2
 
 # Web Scraping
 beautifulsoup4==4.12.2
